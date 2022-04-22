@@ -7,5 +7,6 @@ discord-py-slash-command==3.0.3
 discord.py==1.7.3
 idna==3.3
 multidict==6.0.2
+schedule==1.1.0
 typing-extensions==4.2.0
 yarl==1.7.2
