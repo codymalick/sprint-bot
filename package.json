@@ -1,0 +1,14 @@
+{
+  "name": "sprint-bot",
+  "version": "0.0.1",
+  "description": "A discord bot to help with writing",
+  "main": "index.js",
+  "license": "-",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0"
+  }
+}
