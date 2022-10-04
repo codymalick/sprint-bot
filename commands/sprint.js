@@ -41,7 +41,7 @@ module.exports = {
         } else {
             if(delay !== 0)
             {
-                await interaction.reply(`Starting a ${minutes} minute(s) sprint is starting in `)
+                await interaction.reply(`Starting a ${minutes} minute(s) sprint is starting in ${delay} minute(s)`)
                 await wait(toMs(minutes))
                 await interaction.followUp(`Sprint starting!!`)
             } else {
