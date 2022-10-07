@@ -37,7 +37,7 @@ module.exports = {
             if(delay !== 0)
             {
                 await interaction.reply(`✍️ @here ${formatMinutes(minutes)} sprint starting in ${formatMinutes(delay)}! ✍️`)
-                await wait(toMs(minutes))
+                await wait(toMs(delay))
                 await interaction.followUp(`Sprint starting!!`)
             } else {
                 await interaction.reply(`✍ @here ${mentionUser(userId)} is starting a ${formatMinutes(minutes)} sprint! ✍️`)
@@ -47,7 +47,7 @@ module.exports = {
             if(delay !== 0)
             {
                 await interaction.reply(`✍️ ${formatMinutes(minutes)} sprint starting in ${formatMinutes(delay)}! ✍️`)
-                await wait(toMs(minutes))
+                await wait(toMs(delay))
                 await interaction.followUp(`Sprint starting!!`)
             } else {
                 await interaction.reply(`✍ ${mentionUser(userId)} is starting a ${formatMinutes(minutes)} sprint! ✍️`)
