@@ -1,0 +1,7 @@
+{
+    "SPRINT_INIT": "✍️ ${user} is starting a ${minutes} sprint! ✍️",
+    "SPRINT_INIT_DELAY": "✍️ Starting a ${minutes} sprint is starting in ${delay} ✍",
+    "SPRINT_STARTING": "Sprint Starting!!",
+    "SPRINT_ENDED": "🎆 The sprint is complete! 🎆",
+    "JOIN_SPRINT": "{user} joined the sprint"
+}
