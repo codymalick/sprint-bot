@@ -29,9 +29,18 @@ module.exports = {
         const userId = interaction.user.id
         const channelId = interaction.guildId
 
+        const isSprintActive = Sprint.checkForActiveSprint(channelId)
+
+        if(isSprintActive)
+        {
+            interaction.reply(`Looks like there's already an active sprint, Use \`/join\` to participate!`)
+            return
+        }
+
         const sprint = await Sprint.startSprint(interaction.user.id, minutes, channelId)
         console.log(`Starting a ${minutes} minute sprint`)
         console.log(Sprint.activeSprints.get(`${userId}`))
+
         if(notify)
         {
             if(delay !== 0)
