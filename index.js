@@ -2,11 +2,9 @@
 // Require the necessary discord.js classes
 const fs = require('node:fs')
 const path = require('node:path')
-const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const client = require('./lib/client')
+const { Collection } = require('discord.js');
 const { token } = require('./config.json');
-
-// Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection()
 
@@ -41,3 +39,7 @@ for(const file of eventFiles)
 
 // Login to Discord with your client's token
 client.login(token);
+
+module.exports = {
+	client
+}
