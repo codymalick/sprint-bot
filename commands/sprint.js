@@ -24,11 +24,11 @@ module.exports = {
 	async execute(interaction) {
         const minutes = interaction.options.getInteger('time')
 
-        if(minutes > 14)
-        {
-            interaction.reply({ content: "Sorry, sprints can only be 14 minutes long currently!", ephemeral: true})
-            return 
-        }
+        // if(minutes > 14)
+        // {
+        //     interaction.reply({ content: "Sorry, sprints can only be 14 minutes long currently!", ephemeral: true})
+        //     return 
+        // }
         const toMs = (minutes) => minutes * 60 * 1000
 
         // const delay = interaction.options.getInteger('delay') ?? 0
@@ -69,7 +69,7 @@ module.exports = {
             // }
         }
         await wait(toMs(minutes))
-		await interaction.followUp(`🎆 The sprint is complete! Participants: ${sprint.participants.map(id => mentionUser(id))} 🎆`)
+        await interaction.channel.send(`🎆 The sprint is complete! Participants: ${sprint.participants.map(id => mentionUser(id))} 🎆`)
         Sprint.endSprint(channelId)
 	},
 };
